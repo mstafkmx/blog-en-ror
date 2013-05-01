@@ -1,0 +1,9 @@
+<h1>Editar artículo</h1>
+<%= form_for @post, :url => { :action => "update" } do |f| %>  
+  <%= f.label :title, "Title" %><br />
+  <%= f.text_field :title, :value => @post.title %><br />
+  <%= f.label :body, "Body", :value => @post.body %><br />
+  <%= f.text_area :body, :size => "60x12" %><br />
+  <%= f.hidden_field :id, :value => @post.id %>
+  <%= f.submit "Submit" %>
+<% end %>

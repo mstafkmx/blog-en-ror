@@ -1,0 +1,16 @@
+<div>
+    <h3>Nuevo arículo</h3>
+    <%= form_for @post, :url => { :action => "create" } do |f| %>
+      <div class="field">
+        <%= f.label :title, "Título" %>
+        <%= f.text_field :title %><br />
+      </div>
+      <div class="field">
+        <%= f.label :body, "Cuerpo" %><br />
+        <%= f.text_area :body, :size => "60x12" %><br />
+      </div>
+      <div class="btn-group">
+        <%= f.submit "Guardar" %>
+      </div>
+    <% end %>
+</div>

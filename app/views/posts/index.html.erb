@@ -1,0 +1,11 @@
+<% unless @posts.empty? %>
+  <ul>
+  <% for post in @posts %>
+     <li><%= link_to post.title, posts_show_path(post.id) %></li>
+  <% end %>
+  </ul>
+<% else %>
+  <p>¡No hay ningun articulo!</p>
+  <p>Pulsa <%= link_to 'crear nuevo articulo', posts_new_path %> para crear uno.</p>
+<% end %>
+
